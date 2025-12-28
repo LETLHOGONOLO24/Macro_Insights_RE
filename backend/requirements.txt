@@ -1,0 +1,8 @@
+flask
+gunicorn
+pandas
+numpy
+requests
+pmdarima
+statsmodel
+scikit-learn
