@@ -1,44 +1,71 @@
-#Python
+# ===============================
+# Environment variables
+# ===============================
+.env
+.env.*
+
+# ===============================
+# Python cache & compiled files
+# ===============================
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
+*.pyo
+*.pyd
 
-# Virtual Environment
-backend/venv/
-frontend/venv
-venv*/
-env*/
-ENV*/
+# ===============================
+# Virtual environments
+# ===============================
+venv/
+.venv/
+env/
+ENV/
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+# ===============================
+# Jupyter / Data science artifacts
+# ===============================
+.ipynb_checkpoints/
+*.pkl
+*.joblib
 
-# OS
+# ===============================
+# Streamlit
+# ===============================
+.streamlit/
+.streamlit/secrets.toml
+
+# ===============================
+# Logs
+# ===============================
+*.log
+
+# ===============================
+# OS-specific files
+# ===============================
 .DS_Store
 Thumbs.db
 
-# Data files
-*.csv
-*.xlsx
-*.db
-*.sqlite3
+# ===============================
+# Docker
+# ===============================
+*.tar
+docker-compose.override.yml
+
+# ===============================
+# Test & coverage reports
+# ===============================
+.coverage
+htmlcov/
+pytest_cache/
+
+# ===============================
+# IDE / Editor configs
+# ===============================
+.vscode/
+.idea/
+
+# ===============================
+# Build artifacts
+# ===============================
+dist/
+build/
+*.egg-info/
