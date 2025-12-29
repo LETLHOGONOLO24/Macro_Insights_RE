@@ -1,0 +1,17 @@
+Macro_Fetcher.py
+
+
+*Import the SouthAfricaFetcher and the USFetcher class from the south_africa.py and us.py
+*Declare a class called MacroFetcher
+
+*Declare a constructor function that has 2 parameters called self and country. The constructor has:
+	-Connect self and country and they must be equal to the lowercase of country
+	
+	-Declare an if statement that checks if self connected to country is equal to a string of south africa or a string of za or a string of zaf and if the statement is true:
+		-self connected to fetcher is equal to the SouthAfricaFetcher object
+		
+	-Declare an elif statement that checks if self connected to country is equal to a string of united states or a string of us or a string of usa and if the statement is true:
+		-self connected to fetcher is equal to the USFetcher object
+		
+	-Declare an else statement that raise a ValueError with a format that says "Country '{country}' is not supported yet."
+	-

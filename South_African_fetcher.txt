@@ -1,0 +1,47 @@
+South Africa.py and US.py
+
+*Import pandas and requests
+*Define a class called SouthAfricanFetcher that will have a constructor with a parameter of self
+	and that self will connect to base which will be the url of worldbank api
+	
+*Inside the class, self will connect to headers which will be the headers like user agent and
+	accept
+*Define a function called _fetch which has self and indicator as its parameters
+
+-The function will have a variable called url which will format base and indicator plus the format
+	and per_page
+-The function will also have a try function which will have:
+
+	-A variable called r or request that will use the requests keyword and get function to fetch 
+	the url and have a timeout of 20
+	-The variable will connect to a function called raise_for_status()
+	
+	-Create a variable called data that will connect r or request to the json function
+	-Use the if statement to check if the variable data is a list or not using the isinstance function
+	or check if the length of the data variable is less than 2 and if the if statement is true, print
+	❌ World Bank returned invalid structure and return a DataFrame
+	
+	-Create an empty dictionary called rows
+	-Loop through data starting at the 2nd value of data and use entry as your index
+	
+	-Use the if statement to check if entry at key "value" is not None and if its true, add the date
+	and value inside rows dictionary while converting date into a string and value into float
+	-Declare a variable called df which will connect pd to DataFrame into rows
+	
+	-Use the if statement to check if df is empty and if its empty, print ⚠️ World Bank returned empty
+	dataset and return df
+	-The return statement of try must return df with "Date" as sorted values
+	
+-Declare an except function as e and it must print a format of ❌ Fetch error for {indicator}: {e}
+and return DataFrame
+-Declare a fetch_inflation function with self as its parameter. The function must return self connected to
+	the _fetch function with the south african inflation indicator as its argument
+	
+-Declare a fetch_lending_rate function with self as its parameter. The function must return self connected to
+	the _fetch function with the south african lending rate indicator as its argument
+-Declare a fetch_repo_rate function with self as its parameter. The function must return self connected to
+	the _fetch function with the south african repo rate indicator as its argument 
+	
+-Declare a fetch_gdp_growth function with self as its parameter. Inside the function, we must declare
+	a variable named df and set it to self connected to the _fetch function with the south african
+	gdp indicator as its argument. The function must return df connected to the dropna function
